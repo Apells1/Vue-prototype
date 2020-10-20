@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="vue.css" />
+    <script src="vue.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Andre's Stock Photos</h1>
+
+    
+   
+    <div id="app">	
+      <p v-if="myImage.length > 0"><img v-bind:src="myImage"></p>
+      <button @click="myFunction()">Click to see our great selection of stock photos!</button>
+     
+     
+      <p>
+        Welcome to Andre's stock photo website! here you can purchase a number of
+        incredible watermarked stock photos at only a few fractions of the
+        original price! Here at Andre's stock photo inc we care about 3 things and
+        3 things only.
+      </p>
+  
+      <ol>
+        <li>Quality</li>
+        <li>Money</li>
+        <li>Easy ways to achive money</li>
+        <div id="red"> <div id="test"></div></div>
+       
+      </ol>
+  
+      <p>
+        We here at Andre's stock photos we know how much internet users love clicking
+        buttons, so we've added one here just for you to click!
+      </p>
+      <button @click="videoFunction()">Click me to broaden horizons</button>
+      
+  
+  
+      
+      
+  
+      <div id="tester"  @click="alertFunction()"> <span style="color:black">hello</span></div>
+    </div>
+   
+    <script>
+     new Vue({
+    el: '#app',
+      
+      data: { 
+        myImage:'',
+        counter: 0
+      },
+      
+       methods:{
+        myFunction: function () {	
+         var rando = Math.floor(Math.random() * 4)+1;
+         
+         if(rando == 1){ this.myImage = "corndog.jpg";}
+         if(rando == 2){ this.myImage = "money.jpg";}
+         if(rando == 3){ this.myImage = "fox.jpg";}
+         if(rando == 4){ this.myImage = "gun.jpg";}
+        },
+        
+            alertFunction: function (){
+
+                alert("you win!");
+
+            },
+
+        videoFunction: function (){
+
+          
+          document.getElementById("test").innerHTML = "<li>do not click the bottom left of the screen</li>";
+        },
+
+
+
+
+       }
+    
+    });
+
+   
+    </script>
+
+        
+        
+     
+    
+    
+  </body>
+</html>
